@@ -1,0 +1,36 @@
+INFORMASI KONFIGURASI DAN KREDENSIAL APLIKASI
+===============================================
+
+1. Konfigurasi Aplikasi (Cara Menjalankan)
+Aplikasi ini terbagi menjadi 2 bagian utama: Backend (Spring Boot / Java) dan Frontend (Next.js / React).
+
+[Konfigurasi Backend - Spring Boot]
+- Pastikan Java Development Kit (JDK) versi 17 atau ke atas terinstall.
+- Pastikan MySQL Server (XAMPP / native) menyala.
+- Buat database baru bernama `db_pbok` di MySQL.
+- Import file database `database_mysql.sql` yang terlampir ke dalam database `db_pbok`.
+- Buka terminal/cmd di folder backend, jalankan perintah berikut:
+  Untuk Windows: .\mvnw spring-boot:run
+  Untuk Mac/Linux: ./mvnw spring-boot:run
+- Backend akan berjalan di http://localhost:8080
+
+[Konfigurasi Frontend]
+- Pastikan Node.js (versi LTS) terinstall.
+- Buka terminal/cmd di folder frontend, jalankan perintah:
+  npm install
+- Setelah selesai install dependencies, jalankan:
+  npm run dev
+- Frontend akan berjalan di http://localhost:3000
+
+2. Kredensial Akun (Username & Password per Role)
+Berikut adalah akun yang bisa digunakan untuk mencoba fitur aplikasi sesuai role:
+
+a. Role: Admin
+   - Username/Email : admin@example.com
+   - Password       : password123
+
+b. Role: Staff / Pegawai
+   - Username/Email : staff@example.com
+   - Password       : password123
+
+(Catatan untuk Dosen/Penilai: Password yang terenkripsi di database adalah hasil hash dari BCrypt).
